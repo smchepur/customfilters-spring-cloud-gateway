@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Custom Filters
+
+logging:
+  level:
+    ROOT: DEBUG
+#    org.springframework.cloud.gateway: DEBUG
+#    reactor.netty.http.client: DEBUG
+server:
+  port: 8084
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:

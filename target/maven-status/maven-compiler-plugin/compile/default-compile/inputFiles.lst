@@ -1,0 +1,13 @@
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/factories/ModifyRequestGatewayFilterFactory.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/config/WebClientConfig.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/global/LoggingGlobalFilterProperties.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/factories/ScrubResponseGatewayFilterFactory.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/global/LoggingGlobalFiltersConfigurations.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/global/LoggingGlobalPreFilter.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/factories/LoggingGatewayFilterFactory.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/routes/ServiceRouteConfiguration.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/config/CustomFiltersConfig.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/global/FirstPreLastPostGlobalFilter.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/factories/ModifyResponseGatewayFilterFactory.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/CustomFiltersGatewayApplication.java
+/Users/smchepuri/work_sbg/gateway_customFilters/src/main/java/com/gateway/customfilters/gatewayapp/filters/factories/ChainRequestGatewayFilterFactory.java

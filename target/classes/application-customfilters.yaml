@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: service_route
+          uri: https://httpbin.org
+          predicates:
+            - Path=/service/**
+          filters:
+            - SetPath=/base64/Q2lzY28gU2VjdXJpdHkgQ2xvdWQgaXMgYXdlc29tZQ==
+            #- Logging=Custom Filters Test Message, true, true
+            - name: Logging
+              args:
+                baseMessage: Custom Filters Test Messages
+                preLogger: true
+                postLogger: true
+            - name: ModifyResponse
+            #- ModifyRequest=en
+            - name: ModifyRequest
+              args:
+                locale: en
