@@ -14,8 +14,9 @@ spring:
                 baseMessage: Custom Filters Test Messages
                 preLogger: true
                 postLogger: true
-            - name: ModifyResponse
-            #- ModifyRequest=en
             - name: ModifyRequest
               args:
                 locale: en
+            - name: CheckRequestHeaderAndAddResponseHeader
+            - name: ModifyResponse
+            #- ModifyRequest=en

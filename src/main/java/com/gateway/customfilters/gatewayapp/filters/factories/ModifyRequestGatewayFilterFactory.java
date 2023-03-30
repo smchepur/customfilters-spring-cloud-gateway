@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.server.ServerWebExchange;
@@ -68,10 +69,15 @@ public class ModifyRequestGatewayFilterFactory extends AbstractGatewayFilterFact
                     .toUri()))
                 .build();
 
+            ServerHttpRequest request = exchange.getRequest().mutate()
+                    .headers(httpHeaders -> httpHeaders.add("customheader", "customValue")).build();
+
+            //modifiedExchange.getRequest().getHeaders().add("customheader", "customValue");
+
             log.info("Removed all query params: {}", modifiedExchange.getRequest()
                 .getURI());
 
-            return chain.filter(modifiedExchange);
+            return chain.filter(exchange.mutate().request(request).build());
         };
     }
 

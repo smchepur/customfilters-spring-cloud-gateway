@@ -11,11 +11,14 @@ import reactor.core.publisher.Mono;
 
 @Component
 @Slf4j
-public class LoggingGlobalPreFilter implements GlobalFilter {
+public class LoggingGlobalPostFilter implements GlobalFilter {
+
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("Global Pre Filter executed");
-        return chain.filter(exchange);
+        return chain.filter(exchange)
+                .then(Mono.fromRunnable(() -> {
+                    log.info("LoggingGlobalPostFilter: Global Post Filter executed");
+                }));
     }
 }
