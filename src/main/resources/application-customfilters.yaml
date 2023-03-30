@@ -20,3 +20,13 @@ spring:
             - name: CheckRequestHeaderAndAddResponseHeader
             - name: ModifyResponse
             #- ModifyRequest=en
+        - id: request_rate_limiter
+          uri: https://httpbin.org
+          predicates:
+            - Path=/redis/get/**
+          filters:
+            - SetPath=/base64/Q2lzY28gU2VjdXJpdHkgQ2xvdWQgaXMgYXdlc29tZQ==
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
